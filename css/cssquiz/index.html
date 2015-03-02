@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Katt, kobra eller kråka? (css only)</title>
+  <link rel="stylesheet" href="css/meyerReset.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+  <main>
+    <form>
+      <h1>Katt, kobra eller kråka?</h2>
+      <p>Svara på våra fyra enkla frågor så hjälper vi dig att välja det djur som passar dig bäst!</p>
+      
+      <h3>Fråga 1</h3>
+      <p>Jag tycker bäst om djur som:</p> 
+
+      <!-- 
+        The questions:
+
+        All radio buttons that have the same name attribute
+        are grouped together so that only one of them can be checked
+        at the same time.
+
+        It is good practice to have a label for each radio button.
+        You can click the label to choose the button.
+        You connect a button to a label by giving the button a unique id
+        and using that id as the for attribute value of the label.
+
+        (To make it is for us to generate unique ids for each
+         radio button/label pair we follow the convention 
+         q + question number + a + answer alternative)
+      -->
+      
+      <input type="radio" name="q1" id="q1a1" class="cobra">
+      <label for="q1a1">kravlar</label>
+      <input type="radio" name="q1" id="q1a2" class="cat">
+      <label for="q1a2">smyger</label>
+      <input type="radio" name="q1" id="q1a3" class="crow">
+      <label for="q1a3">flyger</label>
+
+      <h3>Fråga 2</h3>
+      <p>Jag tycker bäst om djur som:</p> 
+      <input type="radio" name="q2" id="q2a1" class="crow">
+      <label for="q2a1">kraxar</label>
+      <input type="radio" name="q2" id="q2a2" class="cobra">
+      <label for="q2a2">väser</label>
+      <input type="radio" name="q2" id="q2a3" class="cat">
+      <label for="q2a3">jamar</label>
+
+      <h3>Fråga 3</h3>
+      <p>Jag tycker bäst om djur som:</p> 
+      <input type="radio" name="q3" id="q3a1" class="crow">
+      <label for="q3a1">har 2 ben</label>
+      <input type="radio" name="q3" id="q3a2" class="cat">
+      <label for="q3a2">har 4 ben</label>
+      <input type="radio" name="q3" id="q3a3" class="cobra">
+      <label for="q3a3">saknar ben</label>
+
+      <h3>Fråga 4</h3>
+      <p>Jag tycker bäst om djur som:</p> 
+      <input type="radio" name="q4" id="q4a1" class="cobra crow">
+      <label for="q4a1">lägger ägg</label>
+      <input type="radio" name="q4" id="q4a2" class="cat">
+      <label for="q4a2">föder levande ungar</label>
+
+      <!--
+
+        The result 
+        (see the quiz.css file to understand
+         how we can make parts of the result show depending
+         on how you have answered the questions)
+
+      -->
+      <section class="result">
+        <p>Du behöver</p>
+        <p class="cat">en katt</p>
+        <p class="cat">och</p>
+        <p class="crow">en kråka</p>
+        <p class="crow">och</p>
+        <p class="cobra">en kobra</p>
+        <p class="cobra">och</p>
+        <div class="test-again">
+          <input type="reset" value="Gör testet igen">
+        </div>
+        <div class="imgs">
+          <img class="cat" src="imgs/cat.jpg">
+          <img class="crow" src="imgs/crow.jpg">
+          <img class="cobra" src="imgs/cobra.jpg">
+        </div>
+      </section>
+
+    </form>
+  </main>
+</body>
+</html>

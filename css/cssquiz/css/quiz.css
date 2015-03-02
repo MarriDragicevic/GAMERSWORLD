@@ -1,0 +1,129 @@
+/*
+  Some basic styling
+*/
+
+body {
+  font-size:16px;
+  line-height:140%;
+  font-family: Georgia, serif;
+  background:#99a;
+}
+
+h1, h2, h3, .result p {
+  font-size:30px;
+  font-family:Verdana, sans-serif;
+  margin:20px 0 10px;
+}
+
+h2 {
+  font-size:20px;
+}
+
+h3 {
+  font-size:16px;
+}
+
+main {
+  width:700px;
+  margin:0 auto;
+  padding:20px;
+  background:#fff;
+}
+
+.result {
+  text-align:center;
+  padding-top:20px;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background:#9a9;
+}
+
+/* The "again" button */
+.result .test-again {
+  position:relative;
+  top:-50px; /* this is just to hide the last "och" */
+  background:#9a9;
+  height:70px;
+}
+
+.result .test-again input {
+   font-size:30px;
+   margin-top:30px;
+}
+
+.result .imgs {
+  display:inline-block;
+}
+
+.result img {
+  width:25vw;
+  margin:0 3vw;
+  float:left;
+}
+
+
+/*
+  Do not display the result initially
+*/
+.result {
+  display:none;
+}
+
+/*
+  Do not display/choose any specific result class 
+  in the result initially
+*/
+.result .cat, .result .crow, .result .cobra {
+  display:none;
+}
+
+/* 
+  All inputs should be checked (all questions answered)
+  before we display the result
+ 
+  ~  = sibling selector
+  :checked = pseudo class for radio and check boxes that are checked
+
+  Technical interpretion:
+  If there are at least 4 elements of the type input that are
+  checked and are siblings and they are siblings with element(s)
+  with the class result as well then display this/these elements
+
+*/
+input:checked ~ input:checked ~ input:checked ~ input:checked ~ .result {
+  display:block;
+}
+
+/*
+  If we choose at least two answers that indicates that we like cobras
+  then display the part(s) of the result that has the cobra class
+
+  Technical interpretion:
+  If there are at least 2 elements of the type input that are
+  checked and have the class cobra and are siblings 
+  and they are siblings with element(s)
+  with the class result as well then display the descendant element(s)
+  of .result that have the class .cobra
+*/
+input.cobra:checked ~ input.cobra:checked ~ .result .cobra {
+  display:block;
+}
+
+/*
+  If we choose at least two answers that indicates that we like cats
+  then display the part(s) of the result that has the cat class
+*/
+input.cat:checked ~ input.cat:checked ~ .result .cat {
+  display:block;
+}
+
+/*
+  If we choose at least two answers that indicates that we like crows
+  then display the part(s) of the result that has the crow class
+*/
+input.crow:checked ~ input.crow:checked ~ .result .crow {
+  display:block;
+}

@@ -1,0 +1,562 @@
+body{
+	background-position: 50% 50%;
+	background-image: url(../img/background2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+/*relativ body, sticky footer: absolute; fixa med margin*/
+
+
+/* Header */
+
+header{
+	width: 100vw;
+	font-size: 15vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+}
+
+
+/* Meny */
+
+nav{
+	width: 100vw;
+	background-image: url(../img/menu.png);
+	position: fixed;
+	top: 13.5vh;
+	left: 0;
+	z-index: 100;
+}
+
+
+nav ul{
+	text-align: center;
+
+}
+
+nav ul li:hover {
+	background-image: url(../img/menuHover.png);
+
+}
+
+
+nav ul li{
+	display: inline-block;
+	list-style: none;
+	padding: 1.5vh 4vh;
+	position: relative;
+}
+
+nav ul li.active{
+	background-color: url(../img/menuHover.png);
+
+}
+
+/* Dropdownmeny */
+
+nav ul ul {
+    display: none;
+}
+ 
+nav ul > li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    background-image: url(../img/underMenu.png);
+}  
+
+nav ul ul li {
+    display: block;
+    background-image: url(../img/underMenu.png);
+    padding: 2vh 4vw;
+	
+}
+
+nav ul ul > li:hover > ul {
+    position: absolute;
+    left: 100%;
+    top:0;
+    padding: 1vh 2vw;
+}
+
+
+/* Slut dropdownmeny */
+
+nav a{
+	
+	font-family: 'Unica One', cursive;
+	font-size: 3.5vh;
+	text-decoration: none;
+	color: #FFF;
+
+}
+
+
+h3 {
+	font-family: 'Unica One', cursive;
+	background-color: black;
+	font-size: 23px;
+	font-weight: bold;
+	color: #FFF;
+	margin-bottom: 15px;
+
+}
+
+p{
+	font-family: calibri;
+	color: black;
+	font-size: 2.25vh;
+}
+
+
+.mainContainer{
+	width: 85vw;
+	height: 50vh;
+	margin: 9vh auto;
+	margin-top: 25vh;
+	
+}
+
+
+.articleContainer{
+	width: 90%;
+	height: 35vh;
+	margin: 0 auto;
+	padding-left: 5vw;
+	padding-bottom: 5vh;
+	display: block;
+}
+
+
+.leftBox{
+	float:left;
+	height: 35vh;
+	width: 27%;
+	border: 1px solid black;
+	background-color: white;
+	margin-right: 2vw;
+	margin-bottom: 10vh;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+.middleBox{
+	float:left;
+	height: 35vh;
+	width: 27%;
+	border: 1px solid black;
+	background-color: white;
+	margin-right: 2vw;
+	margin-bottom: 10vh;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	
+}
+
+.imgMessi{
+	width: 250px;
+	height: 100px;
+	margin: 0 auto;
+
+}
+
+.imgSignature{
+	width: 150px;
+	height: 75px;
+	margin: 0 auto;
+
+}
+
+.imgNintendo{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+
+
+.rightBox{
+	float:left;
+	height: 35vh;
+	width: 27%;
+	border: 1px solid black;
+	background-color: white;
+	margin-right: 2vw;
+	margin-bottom: 10vh;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+
+.clear{
+	clear: both;
+}
+
+
+/* Prevents slides from flashing */
+    #slides {
+      display: none;
+    }
+
+
+
+
+
+@media all and (max-width: 1000px){
+
+	#slides{
+		display: none !important;
+	}
+
+	.mainContainer{
+		background-image: url(../img/smashBros.jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		
+	}
+
+	/* When the size is smaller than iPad- Switch to columns */
+
+	.articleContainer{
+		width: 80%;
+		height: 35vh;
+		margin-left: 1px;
+		padding-bottom: 5vh;
+		display: block;
+}
+
+
+	.leftBox{
+		float:left;
+		height: 35vh;
+		width: 100%;
+		border: 1px solid black;
+		background-color: white;
+		margin-right: 2vw;
+		margin-bottom: 2vh;
+
+	}
+
+	.middleBox{
+		float:left;
+		height: 35vh;
+		width: 100%;
+		border: 1px solid black;
+		background-color: white;
+		margin-right: 2vw;
+		margin-bottom: 2vh;
+
+		
+	}
+
+	.rightBox{
+		float:left;
+		height: 35vh;
+		width: 100%;
+		border: 1px solid black;
+		background-color: white;
+		margin-right: 2vw;
+		margin-bottom: 2vh;
+
+	}
+
+
+
+
+	/*Column code finished*/
+
+
+
+
+	
+}
+
+
+@media all and (max-width: 925px){
+
+	header{
+	width: 100vw;
+	font-size: 14vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+	}
+
+
+	nav{
+	width: 100vw;
+	position: fixed;
+	top: 12.5vh;
+	left: 0;
+	z-index: 100;
+}
+
+
+}
+
+@media all and (max-width: 875px){
+
+	header{
+	width: 100vw;
+	font-size: 12.5vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+	}
+
+
+	nav{
+	width: 100vw;
+	position: fixed;
+	top: 11vh;
+	left: 0;
+	z-index: 100;
+}
+
+
+}
+
+
+@media all and (max-width: 825px){
+
+	header{
+	width: 100vw;
+	font-size: 11.5vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+	}
+
+
+	nav{
+	width: 100vw;
+	position: fixed;
+	top: 10.5vh;
+	left: 0;
+	z-index: 100;
+}
+}
+
+
+@media all and (max-width: 775px){
+
+	header{
+	width: 100vw;
+	font-size: 9vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+	}
+
+	nav{
+	width: 100vw;
+	background-image: url(../img/underMenu.png);
+	position: fixed;
+	top: 13.5vh;
+	left: 0;
+	z-index: 100;
+}
+
+
+	nav a{
+	
+	font-family: 'Unica One', cursive;
+	font-size: 2.5vh;
+	text-decoration: none;
+	color: #FFF;
+
+}
+
+	
+
+	nav{
+	width: 100vw;
+	position: fixed;
+	top: 9vh;
+	left: 0;
+	z-index: 100;
+}
+
+			
+}
+
+@media all and (max-width: 625px){
+
+	header{
+	width: 100vw;
+	font-size: 8.5vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+	}
+
+	nav a{
+	
+	font-family: 'Unica One', cursive;
+	font-size: 2.5vh;
+	text-decoration: none;
+	color: #FFF;
+
+}
+
+	
+	nav{
+	width: 100vw;
+	position: fixed;
+	top: 8vh;
+	left: 0;
+	z-index: 100;
+}
+
+}
+
+
+
+
+@media all and (max-width: 560px){
+
+	header{
+	width: 100vw;
+	font-size: 8vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+	}
+
+
+	nav{
+	width: 100vw;
+	position: fixed;
+	top: 7vh;
+	left: 0;
+	z-index: 100;
+}
+
+	nav a{
+	
+	font-family: 'Unica One', cursive;
+	font-size: 2vh;
+	text-decoration: none;
+	color: #FFF;
+
+}
+
+}
+
+/* Mobile, small devices size*/
+
+@media all and (max-width: 500px){
+
+	#slides{
+		display: none !important;
+	}
+
+	.mainContainer{
+		background-image: url(../img/watchDogs2.jpg);
+		background-repeat: no-repeat;
+		margin: 9vh auto;
+		margin-top: 12vh;
+		
+	}
+
+		header{
+	width: 100vw;
+	font-size: 4.5vh;
+	font-family: 'Audiowide', cursive;
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: black;
+	z-index: 100;
+
+	}
+
+	h3 {
+	font-family: 'Unica One', cursive;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: black;
+	color: #FFF;
+	margin-bottom: 10px;
+
+}
+
+
+	nav{
+	width: 100vw;
+	position: fixed;
+	top: 4.5vh;
+	left: 0;
+	z-index: 100;
+}
+
+
+	nav a{
+	
+	font-family: 'Unica One', cursive;
+	font-size: 2vh;
+	text-decoration: none;
+	color: #FFF;
+
+	}
+
+	nav ul li{
+	display: inline-block;
+	list-style: none;
+	padding: 0.5vh 1vh;
+	position: relative;
+}
+
+	/*Bild i mittenkolumn*/
+	
+	.imgMessi{
+		background-image: url(../img/fifa.png)
+	
+}
+
+}
